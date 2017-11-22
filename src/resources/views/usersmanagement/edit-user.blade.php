@@ -23,7 +23,7 @@
 
             <strong>Editing User:</strong> {{ $user->name }}
 
-            <a href="/users/{{$user->id}}" class="btn btn-primary btn-xs pull-right" style="margin-left: 1em;">
+            <a href="/admin/users/{{$user->id}}" class="btn btn-primary btn-xs pull-right" style="margin-left: 1em;">
               <i class="fa fa-fw fa-mail-reply" aria-hidden="true"></i>
              Back  <span class="hidden-xs">to User</span>
             </a>
@@ -35,7 +35,7 @@
 
           </div>
 
-          {!! Form::model($user, array('action' => array('\jeremykenedy\laravelusers\app\Http\Controllers\UsersManagementController@update', $user->id), 'method' => 'PUT')) !!}
+          {!! Form::model($user, array('action' => array('\swancreative\laravelusers\app\Http\Controllers\UsersManagementController@update', $user->id), 'method' => 'PUT')) !!}
 
             {!! csrf_field() !!}
 

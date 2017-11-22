@@ -17,7 +17,7 @@
 
             Create New User
 
-            <a href="/users" class="btn btn-info btn-xs pull-right">
+            <a href="/admin/users" class="btn btn-info btn-xs pull-right">
               <i class="fa fa-fw fa-mail-reply" aria-hidden="true"></i>
               <span class="hidden-sm hidden-xs">Back to </span><span class="hidden-xs">Users</span>
             </a>
@@ -27,7 +27,7 @@
 
             @include('laravelusers::partials.form-status')
 
-            {!! Form::open(array('action' => '\jeremykenedy\laravelusers\app\Http\Controllers\UsersManagementController@store', 'method' => 'POST', 'role' => 'form')) !!}
+            {!! Form::open(array('action' => '\swancreative\laravelusers\app\Http\Controllers\UsersManagementController@store', 'method' => 'POST', 'role' => 'form')) !!}
 
               {!! csrf_field() !!}
 

@@ -32,7 +32,7 @@
                     <div class="panel-heading">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             Showing All Users
-                            <a href="/users/create" class="btn btn-default btn-sm pull-right">
+                            <a href="/admin/users/create" class="btn btn-default btn-sm pull-right">
                                 <i class="fa fa-fw fa-user-plus" aria-hidden="true"></i>
                                 Create New User
                             </a>
@@ -66,18 +66,18 @@
                                             <td class="hidden-sm hidden-xs">{{$user->created_at}}</td>
                                             <td class="hidden-sm hidden-xs">{{$user->updated_at}}</td>
                                             <td>
-                                                {!! Form::open(array('url' => 'users/' . $user->id, 'class' => '')) !!}
+                                                {!! Form::open(array('url' => '/admin/users/' . $user->id, 'class' => '')) !!}
                                                     {!! Form::hidden('_method', 'DELETE') !!}
                                                     {!! Form::button('<i class="fa fa-trash-o fa-fw" aria-hidden="true"></i> Delete<span><span class="hidden-xs hidden-sm"> this</span><span class="hidden-xs"> User</span>', array('class' => 'btn btn-danger btn-sm','type' => 'button', 'style' =>'width: 100%;' ,'data-toggle' => 'modal', 'data-target' => '#confirmDelete', 'data-title' => 'Delete User', 'data-message' => 'Are you sure you want to delete this user ?')) !!}
                                                 {!! Form::close() !!}
                                             </td>
                                             <td>
-                                                <a class="btn btn-sm btn-success btn-block" href="{{ URL::to('users/' . $user->id) }}">
+                                                <a class="btn btn-sm btn-success btn-block" href="{{ URL::to('admin/users/' . $user->id) }}">
                                                     <i class="fa fa-eye fa-fw" aria-hidden="true"></i> <span>Show</span> <span class="hidden-sm hidden-xs">this</span> <span class="hidden-xs">User</span>
                                                 </a>
                                             </td>
                                             <td>
-                                                <a class="btn btn-sm btn-info btn-block" href="{{ URL::to('users/' . $user->id . '/edit') }}">
+                                                <a class="btn btn-sm btn-info btn-block" href="{{ URL::to('admin/users/' . $user->id . '/edit') }}">
                                                     <i class="fa fa-pencil fa-fw" aria-hidden="true"></i> <span>Edit</span> <span class="hidden-sm hidden-xs">this</span> <span class="hidden-xs">User</span>
                                                 </a>
                                             </td>
