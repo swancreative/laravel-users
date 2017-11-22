@@ -1,6 +1,6 @@
 <?php
 
-namespace jeremykenedy\laravelusers;
+namespace swancreative\laravelusers;
 
 use Illuminate\Support\ServiceProvider;
 
