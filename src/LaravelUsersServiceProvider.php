@@ -36,7 +36,7 @@ class LaravelUsersServiceProvider extends ServiceProvider
     public function register()
     {
         include __DIR__.'/routes/web.php';
-        $this->app->make('jeremykenedy\laravelusers\App\Http\Controllers\UsersManagementController');
+        $this->app->make('swancreative\laravelusers\App\Http\Controllers\UsersManagementController');
     }
 
 
